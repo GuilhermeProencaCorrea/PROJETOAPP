@@ -5,7 +5,7 @@ const Mybutton = (props) => {
 
     return (
         <View style={style.container}>
-            <TouchableOpacity style={style.button}>
+            <TouchableOpacity style={style.button} onPress={props.acao}>
                 <Text style={style.texto}>Entra</Text>
             </TouchableOpacity>
         </View>
@@ -15,13 +15,14 @@ const Mybutton = (props) => {
 const style = StyleSheet.create({
     button:{
         alignItems: 'center',
+        alignContent: 'center',
         backgroundColor: '#F9EF04',
-        borderWidth:2,
         borderColor:'#010101',
+        borderWidth:2,
         padding:2,
         width:310,
         borderRadius:5,
-        marginTop:5
+        top:200  
     },
     texto:{
         fontSize:24,
