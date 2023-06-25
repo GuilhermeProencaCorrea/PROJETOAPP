@@ -11,12 +11,12 @@ function Inicial (){
         <Image source={require('..//../assets/planet-earth.png')}
         style={style.logoImage}
         />
-        <Text>Precisamos plantar mais e colher menos!</Text>
+        <Text style={style.frase}>Rico é aquele que sabe ter o suficiente.</Text>
         <Mybutton></Mybutton>
-        <Image source={require('..//..//assets/plant (1).png')}
+        <Image source={require('..//../assets/plant.png')}
         style={style.rodapeImage}
         />
-        <Text>Em busca de um futuro melhor!</Text>
+        <Text style={style.rodapeText}>Em busca de um futuro melhor!</Text>
         </View>
     );
 
@@ -34,7 +34,10 @@ const style = StyleSheet.create({
         fontSize: 40,
         fontWeight: 700,
         marginLeft:80,
-    },
+        textShadowColor:'black',
+        textShadowOffset:{width: 2, height: 2},
+        textShadowRadius:1,
+    }, 
     logoImage:{
         width: 46,
         resizeMode: 'contain',
@@ -42,10 +45,20 @@ const style = StyleSheet.create({
         right:100,
         bottom:59,
     },
+    rodapeText:{
+        top:230,
+        marginLeft:30,
+    },
     rodapeImage:{
+        marginRight:210,
         resizeMode: 'contain',
-        width: 2,
-        alignItems: 'center',
+        width: 30,
+        height:70,
+        top:274,  
+    },
+    frase:{
+        bottom:80,
+        left: 50,
     }
 });
 export default Inicial;
