@@ -12,16 +12,16 @@ function Inicial ({navigation}){
     return(
         
         <Container>
-        <StatusBar barStyle="dark-content" backgroundColor='#F9EF04' /> 
+        <StatusBar barStyle="dark-content" backgroundColor='#F9EF04'/> 
         <Text style={style.titulo}>Consientiza</Text>
-        <Image source={require('..//../assets/planet-earth.png')}
-        style={style.logoImage}
-        />
+
+        <Image source={require('..//../assets/planet-earth.png')} style={style.logoImage}/>
+
         <Text style={style.fraseText}>Rico é aquele que sabe ter o suficiente.</Text>
         <Mybutton acao={Entrar}></Mybutton>
-        <Image source={require('..//../assets/plant.png')}
-        style={style.rodapeImage}
-        />
+
+        <Image source={require('..//../assets/plant.png')} style={style.rodapeImage}/>
+
         <Text style={style.rodapeText}>Em busca de um futuro melhor!</Text>
         </Container>
        

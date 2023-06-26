@@ -6,24 +6,24 @@ import Home from './src/pages/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const stack =createNativeStackNavigator();
+const Stack =createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <stack.Navigator initialRouteName='Inicial'>
-        <stack.Screen
-        nome='Inicial'
+      <Stack.Navigator initialRouteName='Inicial'>
+        <Stack.Screen
+        name='Inicial'
         component={Inicial}
         />
 
-        <stack.Screen
-        nome='Home'
+        <Stack.Screen
+        name='Home'
         component={Home}
         />
 
 
-      </stack.Navigator>
+      </Stack.Navigator>
 
     </NavigationContainer>
   
