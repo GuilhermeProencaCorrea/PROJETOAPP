@@ -4,10 +4,10 @@ import {Text,StyleSheet,View,Image,Alert} from "react-native";
 import Mybutton from "../../components/Mybutton";
 import { Container } from "..//../styles/styleGeral";
 
-function Inicial (){
-    const Entrar = () =>{
-        Alert.alert("entra no app")
+function Inicial ({navigation}){
 
+    const Entrar = () =>{
+        navigation.navigate('Home');
     }
     return(
         
