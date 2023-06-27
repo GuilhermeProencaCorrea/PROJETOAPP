@@ -1,8 +1,10 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import {Text,StyleSheet,View,Image,Alert} from "react-native";
+import {Text,StyleSheet,Image,View} from "react-native";
+
 import Mybutton from "../../components/Mybutton";
 import { Container } from "..//../styles/styleGeral";
+import { Box } from "..//../styles/styleGeral";
 
 function Inicial ({navigation}){
 
@@ -12,17 +14,25 @@ function Inicial ({navigation}){
     return(
         
         <Container>
+        
         <StatusBar barStyle="dark-content" backgroundColor='#F9EF04'/> 
-        <Text style={style.titulo}>Consientiza</Text>
-
+        <Box>
         <Image source={require('..//../assets/planet-earth.png')} style={style.logoImage}/>
+        <Text style={style.titulo}>Consientiza</Text>
+        </Box>
 
         <Text style={style.fraseText}>Rico é aquele que sabe ter o suficiente.</Text>
+
         <Mybutton acao={Entrar}></Mybutton>
-
-        <Image source={require('..//../assets/plant.png')} style={style.rodapeImage}/>
-
+        
+        <Box>
+        <Image source={require('..//../assets/plant.png')} style={style.rodapeImage}/> 
         <Text style={style.rodapeText}>Em busca de um futuro melhor!</Text>
+        </Box>
+        
+        
+        
+    
         </Container>
        
     );
@@ -35,37 +45,33 @@ const style = StyleSheet.create({
     //     justifyContent: 'center',
     //     backgroundColor: '#fff',
     // },
-    titulo: {
+    logoImage:{ 
+        width: 46,
+        resizeMode: 'contain',
+        marginLeft:50
+    },
+    titulo: { 
         color: '#F9EF04',
         fontSize: 40,
         fontWeight: 700,
-        marginLeft:20,
         textShadowColor:'black',
         textShadowOffset:{width: 2, height: 2},
-        textShadowRadius:1,
+        textShadowRadius:2,
+        marginLeft:3,
+        marginRight:50
     }, 
-    logoImage:{
-        width: 46,
-        resizeMode: 'contain',
-        height:70,
-        right:130,
-        bottom:59,
+    fraseText:{ 
+        alignItems:'center'
+
     },
-    rodapeText:{
-        top:230,
-        marginLeft:30,
+    rodapeText:{ 
+        marginLeft:5,
+        
     },
     rodapeImage:{
-        marginRight:210,
         resizeMode: 'contain',
-        width: 30,
-        height:70,
-        top:274,  
+        width: 30, 
     },
-    fraseText:{
-        bottom:80,
-        left: 30,
-    }
 });
 export default Inicial;
 
