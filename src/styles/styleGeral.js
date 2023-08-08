@@ -14,5 +14,4 @@ const Box = styled.View`
    align-items: center;
 `;
 
-export{Container}
-export{Box}
+export{Container, Box}
